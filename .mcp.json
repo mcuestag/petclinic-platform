@@ -1,5 +1,18 @@
 {
   "mcpServers": {
+    "terraform": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "hashicorp/terraform-mcp-server:latest"
+      ],
+      "env": {
+        "TFE_TOKEN": "your_token_here", 
+        "TFE_ADDRESS": "https://app.terraform.io"
+      }
+    },
     "awslabs.terraform-mcp-server": {
       "type": "stdio",
       "command": "uvx",
@@ -7,7 +20,7 @@
         "awslabs.terraform-mcp-server@latest"
       ],
       "env": {
-        "FASTMCP_LOG_LEVEL": "ERROR"
+        "FASTMCP_LOG_LEVEL": "INFO"
       }
     },
     "aws-knowledge-mcp": {
