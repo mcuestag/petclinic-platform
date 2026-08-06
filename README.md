@@ -95,3 +95,21 @@ petclinic-platform/
 |-------------|---------------|-----|---------|
 | dev | `petclinic-dev` | db.t4g.micro, single-AZ (free tier) | Development & testing |
 | prod | `petclinic-prod` | db.t4g.micro, single-AZ (free tier) | Production |
+
+
+#Prompts del curso:
+- Lección 19:
+Usa el MCP server de Atlassian para leer la Epica "EPIC E-1 Foundation & Remote State" del archivo docs/jira-backlog.md. Implementa las 5 historias PETPLAT-1 a PETPLAT-5. Para cada historia lee los criterios de aceptación y las referencias a las especificaciones técnicas en docs/technical-spec.md. Comienza con la estructura de directorios de PETPLAT-1, despues sigue con el script de inicialización de PETPLAT-2, despues con los backends PETPLAT-3 y PETPLAT-4, y por último con los providers y versiones de PETPLAT-5.
+- Lección 24:
+Lee las siguientes historias de docs/jira-backlog.md:
+- PETPLAT-6: Create VPC module — VPC, subnets, IGW
+- PETPLAT-8: Create baseline security groups
+- PETPLAT-9: Wire VPC module into dev environment
+- PETPLAT-10: Wire VPC module into prod environment
+Lee las especificaciones técnicas de docs/technical-specs.md, concretamente:
+- Sección VPC Network Design
+- Sección Security Groups
+- Sección Terraform modules
+Construye todo lo requerido por las historias. Sigue extrictamente los criterios de aceptación. Cuando termines, ejecuta terraform validate en ambos entornso dev y prod.
+Después usa el agente terraform-reviewer praa revisar el módulo y el agente security-auditor para la seguridad y buenas prácticas.
+Arregla cualquier inicdencia o fallo encontrado por los revisores, después valida de nuevo. 
