@@ -8,6 +8,11 @@ output "public_subnet_ids" {
   value       = aws_subnet.public[*].id
 }
 
+output "internet_gateway_id" {
+  description = "Internet Gateway ID"
+  value       = aws_internet_gateway.this.id
+}
+
 output "eks_cluster_sg_id" {
   description = "EKS cluster (control plane) security group ID"
   value       = aws_security_group.eks_cluster.id

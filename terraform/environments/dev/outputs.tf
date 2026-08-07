@@ -8,6 +8,11 @@ output "public_subnet_ids" {
   value       = module.vpc.public_subnet_ids
 }
 
+output "internet_gateway_id" {
+  description = "Internet Gateway ID"
+  value       = module.vpc.internet_gateway_id
+}
+
 output "eks_cluster_sg_id" {
   description = "EKS cluster (control plane) security group ID"
   value       = module.vpc.eks_cluster_sg_id
