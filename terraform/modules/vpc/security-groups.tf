@@ -81,7 +81,7 @@ resource "aws_vpc_security_group_egress_rule" "node_egress_all" {
 
 resource "aws_security_group" "rds" {
   name        = "${local.name_prefix}-rds-sg"
-  description = "RDS MySQL security group — no egress, ingress from EKS nodes only"
+  description = "RDS MySQL security group - no egress, ingress from EKS nodes only"
   vpc_id      = aws_vpc.this.id
 
   tags = merge(local.common_tags, {
@@ -102,7 +102,7 @@ resource "aws_vpc_security_group_ingress_rule" "rds_from_node_mysql" {
 
 resource "aws_security_group" "alb" {
   name        = "${local.name_prefix}-alb-sg"
-  description = "ALB security group — public-facing (HTTP/HTTPS from internet)"
+  description = "ALB security group - public-facing (HTTP/HTTPS from internet)"
   vpc_id      = aws_vpc.this.id
 
   tags = merge(local.common_tags, {
