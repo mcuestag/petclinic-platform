@@ -38,3 +38,33 @@ variable "availability_zones" {
   type        = list(string)
   default     = ["eu-central-1a", "eu-central-1b"]
 }
+
+variable "cluster_version" {
+  description = "Kubernetes version for the EKS cluster"
+  type        = string
+  default     = "1.34"
+}
+
+variable "node_instance_types" {
+  description = "Instance types for the managed node group"
+  type        = list(string)
+  default     = ["t4g.small"]
+}
+
+variable "node_min_size" {
+  description = "Minimum number of worker nodes"
+  type        = number
+  default     = 2
+}
+
+variable "node_max_size" {
+  description = "Maximum number of worker nodes"
+  type        = number
+  default     = 4
+}
+
+variable "node_desired_size" {
+  description = "Desired number of worker nodes"
+  type        = number
+  default     = 2
+}

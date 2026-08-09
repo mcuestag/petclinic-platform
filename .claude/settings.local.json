@@ -7,7 +7,9 @@
     "allow": [
       "Bash(git init *)",
       "Bash(git checkout *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "mcp__terraform__get_provider_details",
+      "mcp__terraform__search_providers"
     ]
   },
   "enabledMcpjsonServers": [
