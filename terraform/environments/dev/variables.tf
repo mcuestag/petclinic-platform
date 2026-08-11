@@ -68,3 +68,24 @@ variable "node_desired_size" {
   type        = number
   default     = 2
 }
+
+variable "service_names" {
+  description = "Service names to create one ECR repository each for"
+  type        = list(string)
+  default = [
+    "config-server",
+    "discovery-server",
+    "api-gateway",
+    "customers-service",
+    "visits-service",
+    "vets-service",
+    "genai-service",
+    "admin-server",
+  ]
+}
+
+variable "image_tag_mutability" {
+  description = "ECR tag mutability (MUTABLE for dev, IMMUTABLE for prod)"
+  type        = string
+  default     = "MUTABLE"
+}

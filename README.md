@@ -126,3 +126,19 @@ Lee las siguientes historias de docs/jira-backlog.md:
 Construye todo lo requerido por las historias. Sigue extrictamente los criterios de aceptación. Cuando termines, ejecuta terraform validate en ambos entornos dev y prod.
 Después usa el agente terraform-reviewer para revisar el módulo y el agente security-auditor para la seguridad y buenas prácticas.
 Arregla cualquier inicdencia o fallo encontrado por los revisores, después valida de nuevo. 
+## Lección 35 - Creación del repositorio ECR
+Lee las siguientes historias de docs/jira-backlog.md:
+- PETPLAT-18: Create ECR module
+- PETPLAT-19: Add lifecycle policy and tag inmutability configuration
+- PETPLAT-20: Wire ECR module into dev environment and deploy
+- PETPLAT-21: Create ECR login helper script
+- PETPLAT-85: Build and push Docker images to ECR (initial)
+Lee las especificaciones técnicas de docs/technical-spec.md, concretamente:
+- Sección ECR Container Registry
+- Sección Docker Build
+- Sección Terraform Modules (ECR module)
+Construye todo lo requerido por las historias. Sigue extrictamente los criterios de aceptación.
+El script build-push debe usar docker buildx con --plataform linux/amr64 para nodos Graviton. No te bases en Maven buildDocker profile para la creación de las imágenes - usa Maven para consturir los JARs, después docker buildx para construir las imágenes ARM64.
+Cuando termines, ejecuta terraform validate en ambos entornos dev y prod.
+Después usa el agente terraform-reviewer para revisar el módulo y el agente security-auditor para la seguridad y buenas prácticas.
+Arregla cualquier inicdencia o fallo encontrado por los revisores, después valida de nuevo. 

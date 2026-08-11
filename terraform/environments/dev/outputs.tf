@@ -77,3 +77,13 @@ output "kubeconfig_command" {
   description = "Command to update the local kubeconfig for this cluster"
   value       = module.eks.kubeconfig_command
 }
+
+output "ecr_repository_urls" {
+  description = "Map of service_name to ECR repository URL"
+  value       = module.ecr.repository_urls
+}
+
+output "ecr_repository_arns" {
+  description = "Map of service_name to ECR repository ARN"
+  value       = module.ecr.repository_arns
+}

@@ -1159,13 +1159,10 @@ Uses `aws_ecr_repository` with lifecycle policies, scan-on-push, and configurabl
 | Input Variable | Type | Description | Default |
 |---------------|------|-------------|---------|
 | `project` | string | Project name | `"petclinic"` |
-| `service_names` | list(string) | Service names for repos | — |
-| `tags` | map(string) | Additional tags | `{}` |
-
-| Output | Type | Description |
-|--------|------|-------------|
 | `environment` | string | Environment name | — |
-| `image_tag_mutability` | string | Tag mutability | `"MUTABLE"` |
+| `service_names` | list(string) | Service names for repos | — |
+| `image_tag_mutability` | string | Tag mutability (`MUTABLE` or `IMMUTABLE`) | `"MUTABLE"` |
+| `tags` | map(string) | Additional tags | `{}` |
 
 | Output | Type | Description |
 |--------|------|-------------|

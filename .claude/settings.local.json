@@ -9,7 +9,9 @@
       "Bash(git checkout *)",
       "Bash(git add *)",
       "mcp__terraform__get_provider_details",
-      "mcp__terraform__search_providers"
+      "mcp__terraform__search_providers",
+      "Bash(aws ecr *)",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\(i.get\\('imageTags'\\), i.get\\('imageSizeInBytes'\\), i.get\\('artifactMediaType'\\)\\) for i in d['imageDetails']]\")"
     ]
   },
   "enabledMcpjsonServers": [

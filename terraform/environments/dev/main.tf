@@ -36,3 +36,14 @@ module "eks" {
 
   tags = local.common_tags
 }
+
+module "ecr" {
+  source = "../../modules/ecr"
+
+  project              = var.project
+  environment          = var.environment
+  service_names        = var.service_names
+  image_tag_mutability = var.image_tag_mutability
+
+  tags = local.common_tags
+}
